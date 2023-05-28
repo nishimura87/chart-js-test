@@ -1,5 +1,20 @@
 <script>
-import { Bar } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs';
+import pattern from "patternomaly";
+
+const COLORS = [
+  '#1f77b4',
+  '#e377c2',
+  '#ff7f0e',
+  '#2ca02c',
+  '#bcbd22',
+  '#d62728',
+  '#17becf',
+  '#9467bd',
+  '#7f7f7f',
+  '#8c564b'
+];
+
 export default {
   extends: Bar,
   data(){
@@ -9,13 +24,14 @@ export default {
             datasets: [
                 {
                 label: ['Data One'],
-                backgroundColor: '#f87979',
+                backgroundColor: "#268bd2", // instead of this
+                backgroundColor: pattern.draw("dash", "#1f77b4"), // use this
                 data: [40, 30,-20, 0, 10],
                 }
-                
             ]
             
         },
+
         options: {
             responsive: true,
             maintainAspectRatio: false,

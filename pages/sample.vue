@@ -15,13 +15,11 @@
   </div>
 </template>
 
-
-
 <script>
-import BarChart from '~/components/BarChart.vue';
-import BarChart2 from '~/components/BarChart2.vue';
-import LineChart from '~/components/LineChart.vue';
-import DoughnutChart from '~/components/DoughnutChart.vue';
+import BarChart from "~/components/BarChart.vue";
+import BarChart2 from "~/components/BarChart2.vue";
+import LineChart from "~/components/LineChart.vue";
+import DoughnutChart from "~/components/DoughnutChart.vue";
 
 export default {
   components: {
@@ -30,40 +28,39 @@ export default {
     BarChart2,
     DoughnutChart,
   },
-  data(){
-    return{
-      height:100
-    }
+  data() {
+    return {
+      height: 100,
+    };
   },
-  computed:{
-    myStyles(){
-      return{
+  computed: {
+    myStyles() {
+      return {
         height: `${this.height}%`,
-        position:'relative'
-      }
-    }
-  }
-}
+        position: "relative",
+      };
+    },
+  },
+};
 </script>
-
 
 <style>
 .chart {
   padding: 10px 30px;
-  margin:10px;
-  width:500px;
-  height:300px;
-  border:1px solid black;
+  margin: 10px;
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
   border-radius: 10px;
 }
 
 .chart2 {
-  display:flex;
+  display: flex;
   padding: 10px 30px;
-  margin:10px;
-  width:500px;
-  height:300px;
-  border:1px solid black;
+  margin: 10px;
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
   border-radius: 10px;
 }
 </style>
