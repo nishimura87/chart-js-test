@@ -10,7 +10,7 @@ export default {
         datasets: [
           {
             label: ["Data One"],
-            data: [20, 40],
+            data: [50, 60],
             backgroundColor: ["blue","purple"],
             borderWidth: 0,
           },

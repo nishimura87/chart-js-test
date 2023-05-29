@@ -10,7 +10,7 @@ export default {
         datasets: [
           {
             label: ["Data One"],
-            data: [20, 40],
+            data: [20, 50],
             backgroundColor: ["blue","purple"],
             borderWidth: 0,
           },
@@ -38,7 +38,7 @@ export default {
           fontColor: "black",
           fontStyle: "bold",
           fontFamily: "sans-serif",
-          text: "",
+          text: "Doughnut Chart",
         },
       },
     };

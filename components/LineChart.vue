@@ -10,17 +10,38 @@ export default {
           {
             label: 'Data One',
             backgroundColor: '#f87979',
-            data: [40, 30,-20, 0, 10],
-          },
-        ],
+            data: [50, 30,-20, 0, 10],
+          }
+        ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-              display: false,
-            },
-      },
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks:{
+              max:100,
+              min:-100,
+              stepSize:20,
+              fontColor: "black",
+              }
+            }
+          ],
+        },
+        title: {
+          display: true,
+          position: "top",
+          fontSize: 14,
+          fontColor: "black",
+          fontStyle: "bold",
+          fontFamily: "sans-serif",
+          text: 'Line Chart'
+        },
+      }
     }
   },
   mounted() {

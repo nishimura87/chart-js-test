@@ -14,7 +14,6 @@ export default {
                 data: [40, 30,-20, 0, 10],
                 }
             ]
-            
         },
 
         options: {
@@ -22,6 +21,15 @@ export default {
             maintainAspectRatio: false,
             legend: {
               display: false,
+            },
+            title: {
+                display: true,
+                position: "top",
+                fontSize: 14,
+                fontColor: "black",
+                fontStyle: "bold",
+                fontFamily: "sans-serif",
+                text: 'Bar Chart'
             },
         }
     }

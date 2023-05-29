@@ -1,5 +1,5 @@
 <script>
-import { HorizontalBarChart } from 'vue-chartjs';
+import {HorizontalBar} from 'vue-chartjs';
 import pattern from "patternomaly";
 
 const COLORS = [
@@ -16,17 +16,20 @@ const COLORS = [
 ];
 
 export default {
-  extends: HorizontalBarChart,
+  extends: HorizontalBar,
   data(){
     return {
         chartdata: {
-            labels: ['1', '2', '3', '4', '5'],
+            labels: ['1', '2', '3'],
             datasets: [
                 {
                 label: ['Data One'],
-                backgroundColor: "#268bd2", // instead of this
-                backgroundColor: pattern.draw("line-vertical", "#1f77b4"), // use this
-                data: [40, 30,-20, 0, 10],
+                backgroundColor: [
+                  pattern.draw("line-vertical", "#268bd2"),
+                  pattern.draw("line-vertical", "#f87979"),
+                  pattern.draw("line-vertical", "#268bd2"),
+                ],
+                data: [80, 80, 80],
                 }
             ]
             
@@ -37,6 +40,27 @@ export default {
             maintainAspectRatio: false,
             legend: {
               display: false,
+            },
+            scales: {
+              xAxes: [
+                {
+                  ticks:{
+                    max:100,
+                    min:0,
+                    stepSize:10,
+                    fontColor: "black",
+                  }
+                }
+              ],
+            },
+            title: {
+                display: true,
+                position: "top",
+                fontSize: 14,
+                fontColor: "black",
+                fontStyle: "bold",
+                fontFamily: "sans-serif",
+                text: 'Horizontal Bar Chart'
             },
         }
     }

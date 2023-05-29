@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chart_con">
     <div class="chart">
       <BarChart :styles="myStyles" />
     </div>
@@ -7,16 +7,44 @@
       <BarChart2 :styles="myStyles" />
     </div>
     <div class="chart">
-      <BarChart3 :styles="myStyles" />
+      <BarChart3 :styles="myStyles" id="canvas" />
     </div>
     <div class="chart">
       <LineChart :styles="myStyles" />
     </div>
     <div class="chart2">
-      <DoughnutChart :styles="myStyles" />
+      <DoughnutChart :styles="myStyles1" />
+      <DoughnutChart2 :styles="myStyles1" />
+      <DoughnutChart3 :styles="myStyles1" />
     </div>
   </div>
 </template>
+
+<style>
+.chart_con {
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+.chart {
+  padding: 10px 30px;
+  margin: 10px;
+  width: 40%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.chart2 {
+  display: flex;
+  padding: 10px 30px;
+  margin: 10px;
+  width: 40%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+</style>
 
 <script>
 import BarChart from "~/components/BarChart.vue";
@@ -28,13 +56,15 @@ import DoughnutChart from "~/components/DoughnutChart.vue";
 export default {
   components: {
     BarChart,
-    LineChart,
     BarChart2,
+    BarChart3,
+    LineChart,
     DoughnutChart,
   },
   data() {
     return {
       height: 100,
+      width:33,
     };
   },
   computed: {
@@ -44,27 +74,13 @@ export default {
         position: "relative",
       };
     },
+    myStyles1() {
+      return {
+        height: `${this.height}%`,
+        width: `${this.width}%`,
+        position: "relative",
+      };
+    },
   },
 };
 </script>
-
-<style>
-.chart {
-  padding: 10px 30px;
-  margin: 10px;
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.chart2 {
-  display: flex;
-  padding: 10px 30px;
-  margin: 10px;
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-</style>

@@ -47,7 +47,16 @@ export default {
                   }
                 }
               ],
-            }
+            },
+            title: {
+                display: true,
+                position: "top",
+                fontSize: 14,
+                fontColor: "black",
+                fontStyle: "bold",
+                fontFamily: "sans-serif",
+                text: 'Stacked Chart'
+            },
         }
     }
   },
