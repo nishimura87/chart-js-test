@@ -44,6 +44,26 @@ export default {
     };
   },
   mounted() {
+    this.addPlugin({
+      afterDraw(chart, go) {
+        let ctx = chart.ctx
+        chart.data.datasets.forEach((dataset, i) => {
+        })
+
+        // 中央にテキスト表示
+        let fontSize = 10;
+        let fontStyle = 'normal';
+        let fontFamily = "Helvetica Neue";
+        ctx.fillStyle = 'gray';
+        ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        // position(第二, 第三引数は適宜調整)
+        ctx.fillText('SPEED REAR', chart.width / 2 - 1, chart.height / 1.8);
+      }
+    })
     this.renderChart(this.chartdata, this.options);
   },
 };

@@ -5,12 +5,16 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['1', '2', '3', '4', '5'],
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
         datasets: [
           {
             label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [50, 30,-20, 0, 10],
+            backgroundColor: 'rgba(130,130,130,0.3)',
+            fill: true,
+            borderColor: "#fff",
+            lineTension: 0,
+            borderWidth: 1,
+            data: [0, 30, 80, 10, 10, 50, 30,-20, 0, 10],
           }
         ]
       },
@@ -21,14 +25,24 @@ export default {
           display: false,
         },
         scales: {
+          xAxes: [
+            {
+              ticks:{
+                max:100,
+                min:0,
+                stepSize:5,
+                fontColor: "black",
+              },
+            }
+          ],
           yAxes: [
             {
               ticks:{
-              max:100,
-              min:-100,
-              stepSize:20,
-              fontColor: "black",
-              }
+                fontColor: "black",
+              },
+              gridLines: {
+                zeroLineColor: 'rgba(130,130,130,1)',
+              },
             }
           ],
         },
@@ -36,7 +50,7 @@ export default {
           display: true,
           position: "top",
           fontSize: 14,
-          fontColor: "black",
+          fontColor: "#fff",
           fontStyle: "bold",
           fontFamily: "sans-serif",
           text: 'Line Chart'

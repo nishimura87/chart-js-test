@@ -20,7 +20,7 @@ export default {
   data(){
     return {
         chartdata: {
-            labels: ['1', '2', '3'],
+            labels: ['GH', 'TN', 'XX'],
             datasets: [
                 {
                 label: ['Data One'],
@@ -48,7 +48,15 @@ export default {
                     max:100,
                     min:0,
                     stepSize:10,
-                    fontColor: "black",
+                  },
+                }
+              ],
+              yAxes: [
+                {
+                  stacked: true,
+                  ticks:{
+                    fontColor: "#fff",
+                    fontSize: 17
                   }
                 }
               ],
@@ -57,7 +65,7 @@ export default {
                 display: true,
                 position: "top",
                 fontSize: 14,
-                fontColor: "black",
+                fontColor: "#fff",
                 fontStyle: "bold",
                 fontFamily: "sans-serif",
                 text: 'Horizontal Bar Chart'

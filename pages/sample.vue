@@ -25,13 +25,14 @@
   display: flex;
   justify-content: center;
   flex-wrap:wrap;
+  background:black;
 }
 .chart {
   padding: 10px 30px;
   margin: 10px;
   width: 40%;
   height: 300px;
-  border: 1px solid black;
+  border: 1px solid blue;
   border-radius: 10px;
 }
 
@@ -41,7 +42,7 @@
   margin: 10px;
   width: 40%;
   height: 300px;
-  border: 1px solid black;
+  border: 1px solid blue;
   border-radius: 10px;
 }
 </style>
