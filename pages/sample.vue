@@ -7,6 +7,9 @@
       <BarChart2 :styles="myStyles" />
     </div>
     <div class="chart">
+      <BarChart3 :styles="myStyles" />
+    </div>
+    <div class="chart">
       <LineChart :styles="myStyles" />
     </div>
     <div class="chart2">
@@ -18,6 +21,7 @@
 <script>
 import BarChart from "~/components/BarChart.vue";
 import BarChart2 from "~/components/BarChart2.vue";
+import BarChart3 from "~/components/BarChart3.vue";
 import LineChart from "~/components/LineChart.vue";
 import DoughnutChart from "~/components/DoughnutChart.vue";
 
