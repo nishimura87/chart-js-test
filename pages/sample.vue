@@ -28,23 +28,40 @@
   background:black;
 }
 .chart {
-  padding: 10px 30px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 1%;
   width: 40%;
   height: 300px;
   border: 1px solid blue;
   border-radius: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 200px;
+    }
 }
 
 .chart2 {
   display: flex;
-  padding: 10px 30px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 1%;
   width: 40%;
   height: 300px;
   border: 1px solid blue;
   border-radius: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 200px;
+    }
 }
+
 </style>
 
 <script>
